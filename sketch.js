@@ -23,7 +23,7 @@ function draw() {
   textSize(32);
   fill(0, 102, 153, 41);
   push();
-  translate(-60, -20);
+  translate(-100, -100);
   text('let us breathe together', 5, 80);
   pop();
   text('click to begin', 10, 90);
@@ -71,12 +71,12 @@ if (mode == 1){
   
   push();
   fill(104, 11, 150); //porple
-  torus(55,89, 15, 10);
+  torus(50,84, 15, 10);
   pop();
 
   push();
   fill(79, 48, 217); //indigogo
-  torus(50, 78, 14, 10);
+  torus(47, 77, 14, 10);
   pop();
 
   push();
@@ -114,14 +114,16 @@ if (mode == 1){
 }
 
 if (mode == 2){
+ push();
  background(55);
  fill(0, 102, 153, 31);
- translate(-200, -120, -100);
+ translate(-200, -200, -200);
   text('    thank you for', 10, 80);
   translate(0, 30);
   text(' breathing with me.', 10, 80);
   translate(0, 30);
  text('have a good day (:', 10, 80);
+ pop();
 }
 if (mode == 3){
   mode == 0;
