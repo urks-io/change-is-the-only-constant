@@ -32,9 +32,11 @@ function draw() {
 
 if (mode == 1){
   background(1);
+	
 	camera(15, 100, 120 + sin(frameCount * 0.009) * 260, 0, 0, 0, 0, 1, 0);
 	//camera(0, 0, sin(frameCount * 0.009) * 120, 0, 0, 0, 0, 1, 0); //kaleidescope mode
   
+
   push();
 	fill(35, 215, 222, 77);
 	rotateX(frameCount * -0.03);
@@ -111,38 +113,42 @@ if (mode == 1){
   texture(galactic);
   sphere(1000);
   pop();
-}
+
+  print(mode);
+	}
 
 if (mode == 2){
- push();
- camera();
+ 
+ createCamera();
+ camera(0,0,0);
  background(55);
  fill(0, 102, 153, 31);
- translate(-200, -200, -200);
+ textAlign(LEFT, TOP);
   text('    thank you for', 10, 80);
   translate(0, 30);
   text(' breathing with me.', 10, 80);
   translate(0, 30);
  text('have a good day (:', 10, 80);
- pop();
+
 }
-if (mode >= 3){
-  mode == 1;
-}
+
 }
 
 function mousePressed(){
  
- updatemode();
-  
+ if (mode == 0){
+		updatemode();
+	}
 }
 
 function updatemode(){
-  mode = mode + 1;
+  
+  	mode = mode + 1;
+
 }
 
 function touchStarted(){
-	if (mode ==1){
+	if (mode == 0){
 		updatemode();
 	}
 }
