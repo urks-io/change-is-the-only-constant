@@ -115,6 +115,7 @@ if (mode == 1){
 
 if (mode == 2){
  push();
+ camera();
  background(55);
  fill(0, 102, 153, 31);
  translate(-200, -200, -200);
@@ -138,4 +139,8 @@ function mousePressed(){
 
 function updatemode(){
   mode = mode + 1;
+}
+
+function touchStarted(){
+	updatemode();
 }
