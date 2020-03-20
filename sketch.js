@@ -126,8 +126,8 @@ if (mode == 2){
  text('have a good day (:', 10, 80);
  pop();
 }
-if (mode == 3){
-  mode == 0;
+if (mode >= 3){
+  mode == 1;
 }
 }
 
@@ -142,5 +142,7 @@ function updatemode(){
 }
 
 function touchStarted(){
-	updatemode();
+	if (mode ==1){
+		updatemode();
+	}
 }
